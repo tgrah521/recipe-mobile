@@ -1,0 +1,13 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             x:Class="Recipes.Views.AddMealPage"
+             Title="Rezept Hinzufügen">
+
+    <StackLayout Padding="20">
+        <Entry Placeholder="Name des Rezepts" Text="{Binding MealName}" />
+        <Editor Placeholder="Notizen" Text="{Binding Note}" />
+        <Entry Placeholder="Sterne (1-5)" Keyboard="Numeric" Text="{Binding Stars}" />
+        <Button Text="Zutaten Hinzufügen" Command="{Binding AddIngredientCommand}" />
+        <Button Text="Rezept Hinzufügen" Command="{Binding AddMealCommand}" />
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,21 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             x:Class="Recipes.Views.MealPage"
+             Title="Rezepte">
+
+    <StackLayout Padding="20">
+        <SearchBar Placeholder="Suche nach Rezepten"
+                   Text="{Binding SearchText}"
+                   SearchCommand="{Binding SearchCommand}" />
+
+        <CollectionView ItemsSource="{Binding Meals}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="LightGray" Margin="5">
+                        <Label Text="{Binding MealName}" FontSize="20" />
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+
+</ContentPage>
