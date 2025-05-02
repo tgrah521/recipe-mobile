@@ -1,5 +1,4 @@
-﻿using RecipeApp.ViewModels;
-using Recipes.ViewModels;
+﻿using Recipes.ViewModels;
 
 namespace Recipes.Views
 {

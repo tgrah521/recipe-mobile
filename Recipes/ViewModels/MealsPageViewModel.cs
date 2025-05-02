@@ -1,32 +1,28 @@
-﻿using System.Collections.ObjectModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Recipes.Models;
 using Recipes.Services;
-using Recipes.Models;
-using Recipes.Services;
 
-namespace RecipeApp.ViewModels
+namespace Recipes.ViewModels
 {
-    public class MealsPageViewModel : BaseViewModel
+    public partial class MealsPageViewModel : ObservableObject
     {
         private readonly MealService _apiService = new MealService();
-        public ObservableCollection<Meal> Meals { get; set; } = new ObservableCollection<Meal>();
 
-        private string _searchText;
-        public string SearchText
-        {
-            get => _searchText;
-            set
-            {
-                SetProperty(ref _searchText, value);
-            }
-        }
+        public ObservableCollection<Meal> Meals { get; set; } = new();
 
+        [ObservableProperty]
+        private string searchText;
+
+        // Der Befehl wird nun mit RelayCommand erstellt
         public ICommand SearchCommand { get; }
 
         public MealsPageViewModel()
         {
-            SearchCommand = new Command(async () => await SearchMeals());
+            // Der Command wird mit einer Lambda-Funktion erstellt
+            SearchCommand = new RelayCommand(async () => await SearchMeals());
             LoadMeals();
         }
 

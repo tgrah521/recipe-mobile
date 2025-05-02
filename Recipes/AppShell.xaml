@@ -3,7 +3,7 @@
        xmlns:views="clr-namespace:Recipes.Views"
        x:Class="Recipes.AppShell">
 
-    <ShellContent Title="Rezepte" ContentTemplate="{DataTemplate views:MealsPage}" />
+    <ShellContent Title="Rezepte" ContentTemplate="{DataTemplate views:MealPage}" />
     <ShellContent Title="Rezept Detail" ContentTemplate="{DataTemplate views:MealDetailPage}" />
     <ShellContent Title="Rezept Hinzufügen" ContentTemplate="{DataTemplate views:AddMealPage}" />
 

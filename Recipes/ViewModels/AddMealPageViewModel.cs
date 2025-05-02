@@ -2,9 +2,9 @@
 using Recipes.Services;
 using System.Windows.Input;
 
-namespace RecipeApp.ViewModels
+namespace Recipes.ViewModels
 {
-    public class AddMealPageViewModel : BaseViewModel
+    public class AddMealPageViewModel 
     {
         private readonly MealService _apiService = new MealService();
 

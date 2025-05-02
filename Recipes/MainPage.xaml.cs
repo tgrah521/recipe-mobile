@@ -7,8 +7,9 @@
         public MainPage()
         {
             InitializeComponent();
-            await Shell.Current.GoToAsync("addMealPage");
+            //await Shell.Current.GoToAsync("addMealPage");
 
         }
 
     }
+}
