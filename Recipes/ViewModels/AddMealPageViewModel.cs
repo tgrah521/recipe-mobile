@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace Recipes.ViewModels
 {
-    public class AddMealPageViewModel 
+    public class AddMealPageViewModel : BaseViewModel
     {
         private readonly MealService _apiService = new MealService();
 

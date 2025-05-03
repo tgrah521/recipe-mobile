@@ -3,7 +3,7 @@ using Recipes.Services;
 
 namespace Recipes.ViewModels
 {
-    public class MealDetailPageViewModel
+    public class MealDetailPageViewModel: ContentPage
     {
         private readonly MealService _apiService = new MealService();
         public Meal Meal { get; set; }

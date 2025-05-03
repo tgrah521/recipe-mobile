@@ -2,7 +2,7 @@
 
 namespace Recipes.Views
 {
-    public partial class AddMealPage 
+    public partial class AddMealPage : ContentPage
     {
         public AddMealPage()
         {

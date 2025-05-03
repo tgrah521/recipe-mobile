@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Recipes.Views
 {
-    public partial class MealPage
+    public partial class MealPage : ContentPage
     {
         public MealPage()
         {
